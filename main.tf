@@ -18,6 +18,7 @@ resource "random_id" "id" {
 resource "kubernetes_pod_v1" "test" {
   metadata {
     name = "terraform-example"
+    namespace = "flux-system"
   }
 
   spec {
